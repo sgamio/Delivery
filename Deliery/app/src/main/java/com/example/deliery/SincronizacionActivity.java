@@ -99,14 +99,15 @@ public class SincronizacionActivity extends AppCompatActivity {
                         matriz[i++] = (String) ("[ "+ Integer.toString(_p_anno) + " - " + Integer.toString(_p_mes) + "- " + x.get("id_aviso") + " ]  Doc: "
                                 + _pc_documento + " S/ " + Integer.toString(_pc_total));
 
-                        _p_codigo++;
+                        //_p_codigo++;
 
-                        //_p_codigo = Integer.getInteger(x.get("id_aviso"));
-                        //_p_codigo = Integer.parseInt(x.get("id_aviso")) ;
+                        Log.i("PedidoControlDAO", "insertar( " + x.get("id_aviso") + ")");
+                        _p_codigo = Integer.parseInt(x.get("id_aviso").toString());
+
                         //Grabar el pedido
-/*
+
                         try {
-                            Log.i("PedidoControlDAO", "insertar( " + Integer.toString(_s_codigo) + ")");
+                            Log.i("PedidoControlDAO", "insertar( " + Integer.toString(_p_codigo) + ")");
 
                             dao.insertar(_s_codigo, _p_anno, _p_mes, _p_codigo,
                                 _te_codigo, _te_descripcion, _s_codigo_emitir,
@@ -115,14 +116,20 @@ public class SincronizacionActivity extends AppCompatActivity {
                                 _m_codigo, _pc_partida, _pc_entrega, _pc_llegada,
                                 _pc_observacion);
 
-                            Toast toast= Toast.makeText(getApplicationContext(), "Se insertó correctamente", Toast.LENGTH_SHORT);
-                            toast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
-                            toast.show();
 
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast toast= Toast.makeText(getApplicationContext(), "Se insertó correctamente", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
+                                    toast.show();
+                                }
+                            });
                         } catch (DAOException e) {
                             Log.i("PedidoControl", "====> " + e.getMessage());
                         }
-*/
+
                     }
                     Log.i("====>", "Armando Listado (Final)...!!!");
                     final ListView lstProductos = (ListView) findViewById(R.id.ListView_pedidos);
