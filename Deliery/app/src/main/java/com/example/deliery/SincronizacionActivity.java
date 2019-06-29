@@ -72,15 +72,12 @@ public class SincronizacionActivity extends AppCompatActivity {
                     Log.i("====>", "Armando Listado...!!!");
 
                     PedidoControlDAO dao = new PedidoControlDAO(getBaseContext());
+
                     //dao.eliminarTodos();
-                    int _p_codigo = 0;
                     int _s_codigo = 1;
                     int _p_anno = 19;
                     int _p_mes = 6;
-                    int _p_codigo = 0;
-                    /*
-                    //Integer.getInteger(x.get("id_aviso"));
-                    */
+                    int _p_codigo = 1;
                     int _te_codigo = 1;
                     String _te_descripcion = "Normal";
                     int _s_codigo_emitir = 71;
@@ -95,16 +92,20 @@ public class SincronizacionActivity extends AppCompatActivity {
                     int _pc_partida = 0;
                     int _pc_entrega = 0;
                     int _pc_llegada = 0;
-                    String _pc_observacion = "";
 
+                    String _pc_observacion = "";
                     for (Map<String, Object> x : retorno) {
-                        matriz[i++] = (String) (x.get("id_aviso") + " - " + x.get("titulo") + " - Fecha: " + x.get("fecha_inicio"));
+                        //matriz[i++] = (String) (x.get("id_aviso") + " - " + x.get("titulo") + " - Fecha: " + x.get("fecha_inicio"));
+                        matriz[i++] = (String) ("[ "+ Integer.toString(_p_anno) + " - " + Integer.toString(_p_mes) + "- " + x.get("id_aviso") + " ]  Doc: "
+                                + _pc_documento + " S/ " + Integer.toString(_pc_total));
 
                         _p_codigo++;
-/*
-                        //Grabar el pedido
-                        try {
 
+                        //_p_codigo = Integer.getInteger(x.get("id_aviso"));
+                        //_p_codigo = Integer.parseInt(x.get("id_aviso")) ;
+                        //Grabar el pedido
+/*
+                        try {
                             Log.i("PedidoControlDAO", "insertar( " + Integer.toString(_s_codigo) + ")");
 
                             dao.insertar(_s_codigo, _p_anno, _p_mes, _p_codigo,
@@ -121,7 +122,7 @@ public class SincronizacionActivity extends AppCompatActivity {
                         } catch (DAOException e) {
                             Log.i("PedidoControl", "====> " + e.getMessage());
                         }
-                        */
+*/
                     }
                     Log.i("====>", "Armando Listado (Final)...!!!");
                     final ListView lstProductos = (ListView) findViewById(R.id.ListView_pedidos);

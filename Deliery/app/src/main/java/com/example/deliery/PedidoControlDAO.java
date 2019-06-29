@@ -17,7 +17,7 @@ public class PedidoControlDAO {
                          String _pc_documento, int _c_codigo, int _cd_item, int _pc_total,
                          String _m_codigo, int _pc_partida, int _pc_entrega, int _pc_llegada,
                          String _pc_observacion) throws DAOException {
-        Log.i("PedidoControlDAO", "insertar( " + Integer.toString(_s_codigo) + ")");
+        //Log.i("PedidoControlDAO", "insertar( " + Integer.toString(_s_codigo) + ")");
         SQLiteDatabase db = _dbHelper.getWritableDatabase();
         try {
             String[] args = new String[]{Integer.toString(_s_codigo), Integer.toString(_p_anno), Integer.toString(_p_mes), Integer.toString(_p_codigo),
