@@ -18,25 +18,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String sql_cliente = "CREATE TABLE IF NOT EXISTS cliente (" +
-                "c_codigo INTEGER NOT NULL, " +
-                "tdi_codigo INTEGER NOT NULL, " +
-                "tdi_numero INTEGER NOT NULL, " +
-                "c_nombre TEXT NOT NULL, " +
-                "c_telefono TEXT NOT NULL )";
-        db.execSQL(sql_cliente);
-
-        String sql_cliente_direccion = "CREATE TABLE IF NOT EXISTS cliente_direccion (" +
-                "c_codigo INTEGER NOT NULL, " +
-                "cd_item INTEGER NOT NULL, " +
-                "cd_direccion TEXT NOT NULL, " +
-                "cd_distrito TEXT NOT NULL, " +
-                "cd_referencia TEXT, " +
-                "cd_latitud NUMERIC NOT NULL," +
-                "cd_longitud NUMERIC NOT NULL)";
-        db.execSQL(sql_cliente_direccion);
-
-        String sql_pedido_control = "CREATE TABLE IF NOT EXISTS pedido_control (" +
+         String sql_pedido_control = "CREATE TABLE IF NOT EXISTS pedido_control (" +
                 "s_codigo INTEGER NOT NULL, " +
                 "p_anno INTEGEER NOT NULL, " +
                 "p_mes INTEGEER NOT NULL, " +
@@ -49,7 +31,15 @@ public class DbHelper extends SQLiteOpenHelper {
                 "pc_hora_entrega NUMERIC, " +
                 "pc_documento TEXT NOT NULL, " +
                 "c_codigo INTEGRE NOT NULL, "+
-                "cd_item INTEGRE NOT NULL, "+
+                "tdi_codigo INTEGER NOT NULL, " +
+                "tdi_numero INTEGER NOT NULL, " +
+                "c_nombre TEXT NOT NULL, " +
+                "c_telefono TEXT NOT NULL," +
+                "cd_direccion TEXT NOT NULL, " +
+                "cd_distrito TEXT NOT NULL, " +
+                "cd_referencia TEXT, " +
+                "cd_latitud NUMERIC NOT NULL," +
+                "cd_longitud NUMERIC NOT NULL," +
                 "pc_total INTEGER NOT NULL, " +
                 "m_codigo TEXT NOT NULL, " +
                 "pc_partida NUMERIC, " +
@@ -100,12 +90,6 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
 
         db.execSQL("DROP TABLE IF EXISTS pedido_control_evento_estado ");
-        onCreate(db);
-
-        db.execSQL("DROP TABLE IF EXISTS cliente ");
-        onCreate(db);
-
-        db.execSQL("DROP TABLE IF EXISTS cliente_direccion ");
         onCreate(db);
 
     }

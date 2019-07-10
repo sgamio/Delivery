@@ -86,7 +86,15 @@ public class SincronizacionActivity extends AppCompatActivity {
                     int _pc_hora_entrega = 10;
                     String _pc_documento = "BO/B071-00002351";
                     int _c_codigo = 740001;
-                    int _cd_item = 1;
+                    int _tdi_codigo = 1;
+                    String _tdi_numero= "09869614";
+                    String _c_nombre="Gamio Pino Sandro";
+                    String _c_telefono = "2478961";
+                    String _cd_direccion = "Calle la Luna 242 - Urb. San Roque";
+                    String _cd_distrito = "Santiago de Surco";
+                    String _cd_referencia = "Esquina de Alfredo Icaza con Marte";
+                    int _cd_latitud=0;
+                    int _cd_longitud=0;
                     int _pc_total = 150;
                     String _m_codigo = "GPI001";
                     int _pc_partida = 0;
@@ -105,18 +113,16 @@ public class SincronizacionActivity extends AppCompatActivity {
                         _p_codigo = Integer.parseInt(x.get("id_aviso").toString());
 
                         //Grabar el pedido
-
                         try {
                             Log.i("PedidoControlDAO", "insertar( " + Integer.toString(_p_codigo) + ")");
 
                             dao.insertar(_s_codigo, _p_anno, _p_mes, _p_codigo,
                                 _te_codigo, _te_descripcion, _s_codigo_emitir,
-                                _pp_codigo, _pp_descripcion, _pc_hora_entrega,
-                                _pc_documento, _c_codigo, _cd_item, _pc_total,
-                                _m_codigo, _pc_partida, _pc_entrega, _pc_llegada,
+                                _pp_codigo, _pp_descripcion, _pc_hora_entrega, _pc_documento,
+                                _c_codigo, _tdi_codigo, _tdi_numero, _c_nombre, _c_telefono,
+                                _cd_direccion, _cd_distrito, _cd_referencia, _cd_latitud, _cd_longitud,
+                                _pc_total, _m_codigo, _pc_partida, _pc_entrega, _pc_llegada,
                                 _pc_observacion);
-
-
 
                             runOnUiThread(new Runnable() {
                                 @Override
