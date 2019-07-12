@@ -13,8 +13,18 @@ public class PedidoControl {
     private String _pp_descripcion;
     private int _pc_hora_entrega;
     private String _pc_documento;
+
     private int _c_codigo;
-    private int _cd_item;
+    private int _tdi_codigo;
+    private String _tdi_numero;
+    private String _c_nombre;
+    private String _c_telefono;
+    private String _cd_direccion;
+    private String _cd_distrito;
+    private String _cd_referencia;
+    private int _cd_latitud;
+    private int _cd_longitud;
+
     private int _pc_total;
     private String _m_codigo;
     private int _pc_partida;
@@ -22,12 +32,12 @@ public class PedidoControl {
     private int _pc_llegada;
     private String _pc_observacion;
 
-    public PedidoControl(int _s_codigo, int _p_anno, int _p_mes, int _p_codigo,
-                         int _te_codigo, String _te_descripcion, int _s_codigo_emitir,
-                         int _pp_codigo, String _pp_descripcion, int _pc_hora_entrega,
-                         String _pc_documento, int _c_codigo, int _cd_item, int _pc_total,
-                         String _m_codigo, int _pc_partida, int _pc_entrega, int _pc_llegada,
-                         String _pc_observacion) {
+    public PedidoControl(int _s_codigo, int _p_anno, int _p_mes, int _p_codigo, int _te_codigo,
+                         String _te_descripcion, int _s_codigo_emitir, int _pp_codigo, String _pp_descripcion,
+                         int _pc_hora_entrega, String _pc_documento, int _c_codigo, int _tdi_codigo,
+                         String _tdi_numero, String _c_nombre, String _c_telefono, String _cd_direccion,
+                         String _cd_distrito, String _cd_referencia, int _cd_latitud, int _cd_longitud,
+                         int _pc_total, String _m_codigo, int _pc_partida, int _pc_entrega, int _pc_llegada, String _pc_observacion) {
         this._s_codigo = _s_codigo;
         this._p_anno = _p_anno;
         this._p_mes = _p_mes;
@@ -40,7 +50,15 @@ public class PedidoControl {
         this._pc_hora_entrega = _pc_hora_entrega;
         this._pc_documento = _pc_documento;
         this._c_codigo = _c_codigo;
-        this._cd_item = _cd_item;
+        this._tdi_codigo = _tdi_codigo;
+        this._tdi_numero = _tdi_numero;
+        this._c_nombre = _c_nombre;
+        this._c_telefono = _c_telefono;
+        this._cd_direccion = _cd_direccion;
+        this._cd_distrito = _cd_distrito;
+        this._cd_referencia = _cd_referencia;
+        this._cd_latitud = _cd_latitud;
+        this._cd_longitud = _cd_longitud;
         this._pc_total = _pc_total;
         this._m_codigo = _m_codigo;
         this._pc_partida = _pc_partida;
@@ -145,12 +163,76 @@ public class PedidoControl {
         this._c_codigo = _c_codigo;
     }
 
-    public int get_cd_item() {
-        return _cd_item;
+    public int get_tdi_codigo() {
+        return _tdi_codigo;
     }
 
-    public void set_cd_item(int _cd_item) {
-        this._cd_item = _cd_item;
+    public void set_tdi_codigo(int _tdi_codigo) {
+        this._tdi_codigo = _tdi_codigo;
+    }
+
+    public String get_tdi_numero() {
+        return _tdi_numero;
+    }
+
+    public void set_tdi_numero(String _tdi_numero) {
+        this._tdi_numero = _tdi_numero;
+    }
+
+    public String get_c_nombre() {
+        return _c_nombre;
+    }
+
+    public void set_c_nombre(String _c_nombre) {
+        this._c_nombre = _c_nombre;
+    }
+
+    public String get_c_telefono() {
+        return _c_telefono;
+    }
+
+    public void set_c_telefono(String _c_telefono) {
+        this._c_telefono = _c_telefono;
+    }
+
+    public String get_cd_direccion() {
+        return _cd_direccion;
+    }
+
+    public void set_cd_direccion(String _cd_direccion) {
+        this._cd_direccion = _cd_direccion;
+    }
+
+    public String get_cd_distrito() {
+        return _cd_distrito;
+    }
+
+    public void set_cd_distrito(String _cd_distrito) {
+        this._cd_distrito = _cd_distrito;
+    }
+
+    public String get_cd_referencia() {
+        return _cd_referencia;
+    }
+
+    public void set_cd_referencia(String _cd_referencia) {
+        this._cd_referencia = _cd_referencia;
+    }
+
+    public int get_cd_latitud() {
+        return _cd_latitud;
+    }
+
+    public void set_cd_latitud(int _cd_latitud) {
+        this._cd_latitud = _cd_latitud;
+    }
+
+    public int get_cd_longitud() {
+        return _cd_longitud;
+    }
+
+    public void set_cd_longitud(int _cd_longitud) {
+        this._cd_longitud = _cd_longitud;
     }
 
     public int get_pc_total() {
@@ -199,5 +281,8 @@ public class PedidoControl {
 
     public void set_pc_observacion(String _pc_observacion) {
         this._pc_observacion = _pc_observacion;
+    }
+
+    public static class PedidoRecycleViewAdaptador {
     }
 }
