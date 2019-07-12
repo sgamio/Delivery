@@ -39,19 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void mostrar_ingreso(View view ) throws DAOException {
 
-        Log.i("====>", "Ingresar");
+        Log.i("====>", "Ingresar - Inicializa las tablas para el motorizado...!!!");
 
         PedidoControlDAO dao = new PedidoControlDAO(getBaseContext());
-<<<<<<< HEAD
         dao.eliminarTodos();
 
-=======
-
-        dao.eliminarTodos();
-
-
->>>>>>> 8791b816cabe5cedb111118617145be1688097aa
-        Toast.makeText(this, "Dentro de Mostrar 1", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Se inicializa los Datos...!!!", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, OpcionesActivity.class));
     }
 

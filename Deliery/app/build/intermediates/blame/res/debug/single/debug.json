@@ -68,6 +68,10 @@
         "source": "/home/sgamio/.gradle/caches/transforms-2/files-2.1/03d8464142f9ded38a46ae681640e904/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
+        "merged": "/home/sgamio/AndroidStudioProjects/Moviles/Delivery/Deliery/app/build/intermediates/res/merged/debug/layout_item_pedido.xml.flat",
+        "source": "/home/sgamio/AndroidStudioProjects/Moviles/Delivery/Deliery/app/src/main/res/layout/item_pedido.xml"
+    },
+    {
         "merged": "/home/sgamio/AndroidStudioProjects/Moviles/Delivery/Deliery/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/sgamio/.gradle/caches/transforms-2/files-2.1/03d8464142f9ded38a46ae681640e904/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },

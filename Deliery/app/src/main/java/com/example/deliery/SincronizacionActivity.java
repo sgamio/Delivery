@@ -98,23 +98,72 @@ public class SincronizacionActivity extends AppCompatActivity {
                     int _cd_longitud=0;
                     int _pc_total = 150;
                     String _m_codigo = "GPI001";
-                    int _pc_partida = 0;
+                    String _pc_partida = "";
                     int _pc_entrega = 0;
-                    int _pc_llegada = 0;
+                    String _pc_llegada = "";
 
                     String _pc_observacion = "";
                     for (Map<String, Object> x : retorno) {
-                        matriz[i++] = (String) ("[ "+ Integer.toString(_p_anno) + " - " + Integer.toString(_p_mes) + "- " + x.get("id_aviso") + " ]  Doc: "
+                        matriz[i++] = (String) ("[ "+ Integer.toString(_p_anno).toString() + " - " + Integer.toString(_p_mes).toString() + "- |" + x.get("id_aviso") + "| ]  Doc: "
                                 + _pc_documento + " S/ " + Integer.toString(_pc_total));
 
-                        //_p_codigo++;
 
                         Log.i("PedidoControlDAO", "insertar( " + x.get("id_aviso") + ")");
                         _p_codigo = Integer.parseInt(x.get("id_aviso").toString());
 
+                        if (_p_codigo == 3){
+                            _c_codigo = 403;
+                            _tdi_codigo = 1;
+                            _tdi_numero= "00173709";
+                            _c_nombre="COTRINA CHAMORRO GILBERTO";
+                            _c_telefono = "2478961";
+                            _cd_direccion = "AV. 28 DE JULIO NRO. S/N SAN ALEJANDRO";
+                            _cd_distrito = "SANTIAGO DE SURCO";
+                            _cd_referencia = "CARRETERA F. BASADRE KM  110 AL COSTADO DEL ESTADIO KM. 111 F. BASADR";
+                            _pc_total = 276;
+                        }
+
+
+                        if (_p_codigo == 95){
+                            _c_codigo = 14863;
+                            _tdi_codigo = 1;
+                            _tdi_numero= "00173709";
+                            _c_nombre="SUAREZ CABALLERO DE TRAVI LUZ ELENA";
+                            _c_telefono = "3464028";
+                            _cd_direccion = "BL. 44 INT. 208 U.V. MIRONES";
+                            _cd_distrito = "SANTIAGO DE SURCO";
+                            _cd_referencia = "ALT.CDRA.2 AV.BAILETI CON SAN LUIS/11 DE ROSA TORO 2DO PISO ALT.CRUCE A";
+                            _pc_total = 137;
+                        }
+
+                        if (_p_codigo == 96){
+                            _c_codigo = 24946;
+                            _tdi_codigo = 1;
+                            _tdi_numero= "09775409";
+                            _c_nombre="NAPAN YACTAYO LUISA YNES";
+                            _c_telefono = "6108484";
+                            _cd_direccion = "BL. 44 INT. 208 U.V. MIRONES";
+                            _cd_distrito = "SANTIAGO DE SURCO";
+                            _cd_referencia = "AV.SANTA CRUZ 950 7MO.PISO MIRAFLORES // ANEXO.441 FRENTE AL EX CINE RIVAGUERO";
+                            _pc_total = 126;
+                        }
+
+                        if (_p_codigo == 97){
+                            _c_codigo = 33111;
+                            _tdi_codigo = 1;
+                            _tdi_numero= "08867204";
+                            _c_nombre="BUSTAMANTE SAN MIGUEL JOSE LUIS";
+                            _c_telefono = "";
+                            _cd_direccion = "AV REPUBLICA DE PANAMA 4174 SURQUILLO";
+                            _cd_distrito = "SURQUILLO";
+                            _cd_referencia = "ALT FACULTAD TURISMO DE S MARTIN";
+                            _pc_total = 126;
+                        }
+
+
                         //Grabar el pedido
                         try {
-                            Log.i("PedidoControlDAO", "insertar( " + Integer.toString(_p_codigo) + ")");
+                            Log.i("PedidoControlDAO", "insertar()");
 
                             dao.insertar(_s_codigo, _p_anno, _p_mes, _p_codigo,
                                 _te_codigo, _te_descripcion, _s_codigo_emitir,

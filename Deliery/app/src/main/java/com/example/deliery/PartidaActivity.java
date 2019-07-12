@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class PartidaActivity extends AppCompatActivity {
 
     @Override
@@ -16,12 +19,15 @@ public class PartidaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_partida);
     }
 
-    public void p_Patida(View view ){
+    public void p_Patida(View view )  throws DAOException{
+
+        PedidoControlDAO dao = new PedidoControlDAO(getBaseContext());
+        dao.partida();
+
         Log.i("====>", "Se registro la partida del motorizado con exito...!!!");
         Toast.makeText(this, "Se registro la partida del motorizado con exito...!!!\"", Toast.LENGTH_SHORT).show();
+
+        startActivity(new Intent(this, OpcionesActivity.class)); 
     }
 
-    public void p_Regresa(View view ){
-        startActivity(new Intent(this, OpcionesActivity.class));
-    }
 }

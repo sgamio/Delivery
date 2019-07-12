@@ -16,12 +16,14 @@ public class LlegadaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_llegada);
     }
 
-    public void p_Llegada(View view ){
-        Log.i("====>", "Se registro la llegada del motorizado a la sucursal con exito...!!!");
-        Toast.makeText(this, "Se registro la llegada del motorizado a la sucursal con exito...!!!", Toast.LENGTH_SHORT).show();
-    }
+    public void p_Llegada(View view ) throws DAOException {
 
-    public void p_Regresa(View view ){
+        PedidoControlDAO dao = new PedidoControlDAO(getBaseContext());
+        dao.llegada();
+
+        Log.i("====>", "Se registro la llegada del motorizado con exito...!!!");
+        Toast.makeText(this, "Se registro la llegada del motorizado a la sucursal con exito...!!!", Toast.LENGTH_SHORT).show();
+
         startActivity(new Intent(this, OpcionesActivity.class));
     }
 

@@ -22,8 +22,4 @@ public class SalirActivity extends AppCompatActivity {
         startActivity(new Intent(this, MainActivity.class));
     }
 
-    public void p_Regresa(View view ){
-        startActivity(new Intent(this, OpcionesActivity.class));
-    }
-
 }
