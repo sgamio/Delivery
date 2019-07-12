@@ -37,11 +37,17 @@ public class MainActivity extends AppCompatActivity {
 */
     }
 
-    public void mostrar_ingreso(View view ){
+    public void mostrar_ingreso(View view ) throws DAOException {
+
         Log.i("====>", "Ingresar");
+
+        PedidoControlDAO dao = new PedidoControlDAO(getBaseContext());
+
+        dao.eliminarTodos();
+
+
         Toast.makeText(this, "Dentro de Mostrar 1", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, OpcionesActivity.class));
     }
-
 
 }

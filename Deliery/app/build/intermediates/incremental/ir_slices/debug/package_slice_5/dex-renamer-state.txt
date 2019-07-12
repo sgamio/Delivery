@@ -1,0 +1,4 @@
+#Thu Jul 11 19:11:47 PET 2019
+base.0=/home/sgamio/AndroidStudioProjects/Moviles/Delivery/Deliery/app/build/intermediates/transforms/dexMerger/debug/5
+path.0=classes.dex
+renamed.0=classes.dex

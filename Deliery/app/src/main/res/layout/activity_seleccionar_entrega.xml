@@ -6,39 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".SeleccionarEntregaActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="8dp"
-        android:text="Seleccionar Entrega"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/but_regresar"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginBottom="48dp"
-        android:onClick="p_Regresa"
-        android:text="Regresar"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:scrollbars="vertical" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="46dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/seleccion3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
