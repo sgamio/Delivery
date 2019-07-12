@@ -197,6 +197,7 @@ public class PedidoControl {
 
     public String get_cd_direccion() {
         return _cd_direccion;
+<<<<<<< HEAD
     }
 
     public void set_cd_direccion(String _cd_direccion) {
@@ -231,6 +232,42 @@ public class PedidoControl {
         return _cd_longitud;
     }
 
+=======
+    }
+
+    public void set_cd_direccion(String _cd_direccion) {
+        this._cd_direccion = _cd_direccion;
+    }
+
+    public String get_cd_distrito() {
+        return _cd_distrito;
+    }
+
+    public void set_cd_distrito(String _cd_distrito) {
+        this._cd_distrito = _cd_distrito;
+    }
+
+    public String get_cd_referencia() {
+        return _cd_referencia;
+    }
+
+    public void set_cd_referencia(String _cd_referencia) {
+        this._cd_referencia = _cd_referencia;
+    }
+
+    public int get_cd_latitud() {
+        return _cd_latitud;
+    }
+
+    public void set_cd_latitud(int _cd_latitud) {
+        this._cd_latitud = _cd_latitud;
+    }
+
+    public int get_cd_longitud() {
+        return _cd_longitud;
+    }
+
+>>>>>>> 8791b816cabe5cedb111118617145be1688097aa
     public void set_cd_longitud(int _cd_longitud) {
         this._cd_longitud = _cd_longitud;
     }

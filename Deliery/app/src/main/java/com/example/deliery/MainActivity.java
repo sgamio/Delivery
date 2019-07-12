@@ -42,8 +42,15 @@ public class MainActivity extends AppCompatActivity {
         Log.i("====>", "Ingresar");
 
         PedidoControlDAO dao = new PedidoControlDAO(getBaseContext());
+<<<<<<< HEAD
         dao.eliminarTodos();
 
+=======
+
+        dao.eliminarTodos();
+
+
+>>>>>>> 8791b816cabe5cedb111118617145be1688097aa
         Toast.makeText(this, "Dentro de Mostrar 1", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, OpcionesActivity.class));
     }
